@@ -31,3 +31,6 @@
 
         - /sejong : 세종캠퍼스 정보의 JSON을 응답합니다
     
+    ![img](img/1.PNG)
+    ![img](img/2.PNG)
+    
