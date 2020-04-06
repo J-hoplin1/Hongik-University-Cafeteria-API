@@ -17,7 +17,7 @@
 ***
 - API 
 
-    - 해당 Repository의 API는 Flask 프레임워크를 이용해 간단하게만 만든 API입니다(Apache, mod_wsgi 적용안함)
+    - 해당 Repository의 API는 Flask 프레임워크를 이용해 간단하게만 만든 API입니다(Apache, mod_wsgi 등 적용안함)
     
     - HTTP 메소드는 GET 입니다.
     
