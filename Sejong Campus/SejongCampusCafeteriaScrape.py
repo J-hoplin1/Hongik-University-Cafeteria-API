@@ -43,7 +43,7 @@ capsule = []
 if n == 6:
     makeTodayMealization["Date"] = todayDate
     makeTodayMealization[Location[0]] = {
-        Location[1]: []
+        Location[1]: ""
     }
     makeTodayMealization[Location[2]] = {
         Location[3]: "",
@@ -53,7 +53,7 @@ if n == 6:
         Location[7] + "_2": "",
         Location[8] + "_1": "",
         Location[9] + "_2": "",
-        Location[10]: []
+        Location[10]: ""
     }
     makeTodayMealization[Location[11]] = {
         Location[12]: "",
