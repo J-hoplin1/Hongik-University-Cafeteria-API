@@ -9,12 +9,13 @@ import time
 import unidecode
 import re
 import json
+todayDate = time.strftime('%Y-%m-%d', time.localtime(time.time()))
 
 #Convert Dictionary to json
 dirCode = os.getcwd()
 def saveAsJSON(jsonStr):
     #save at same directory with code
-    with open('HongikUnivSeoulCampusCafeteria.json', 'w', encoding="utf-8") as make_file:
+    with open('HongikUnivSeoulCampusCafeteria'+todayDate+'.json', 'w', encoding="utf-8") as make_file:
         json.dump(jsonStr, make_file, ensure_ascii=False, indent="\t") #indent -> Indentation parameter
 
 
@@ -48,23 +49,23 @@ makeTodaySchoolMealization = dict()
 
 capsule = []
 
-todayDate = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+
 makeTodaySchoolMealization["Date"] = todayDate
 if n == 6: #요일이 일요일인 경우에는 scrape할 값이없다.
     makeTodaySchoolMealization[subtitleList[0]] = {
-        priceList[0]: [],
-        priceList[1]: []
+        priceList[0]: "",
+        priceList[1]: ""
     }
     makeTodaySchoolMealization[subtitleList[1]] = {
-        priceList[2]: [],
-        priceList[3]: []
+        priceList[2]: "",
+        priceList[3]: ""
     }
     # 점심(11:30~14:30) 값이 두번있어서 키 중복 방지를 위해 "_"를 붙여준것이다.
     makeTodaySchoolMealization[subtitleList[2]] = {
-        priceList[4]: [],
-        priceList[5]: [],
-        priceList[6] + "_": [],
-        priceList[7]: []
+        priceList[4]: "",
+        priceList[5] + "_1": "",
+        priceList[6] + "_2": "",
+        priceList[7]: ""
     }
     saveAsJSON(makeTodaySchoolMealization)
 else:
@@ -84,8 +85,8 @@ else:
     # 점심(11:30~14:30) 값이 두번있어서 키 중복 방지를 위해 "_"를 붙여준것이다.
     makeTodaySchoolMealization[subtitleList[2]] = {
         priceList[4]: capsule[4],
-        priceList[5]: capsule[5],
-        priceList[6] + "_": capsule[6],
+        priceList[5] + "_1": capsule[5],
+        priceList[6] + "_2": capsule[6],
         priceList[7]: capsule[7]
     }
     saveAsJSON(makeTodaySchoolMealization)
