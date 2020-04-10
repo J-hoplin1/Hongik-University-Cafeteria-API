@@ -19,6 +19,8 @@
 
     - 해당 Repository의 API는 Flask 프레임워크를 이용해 간단하게만 만든 API입니다
     
+    - API 서버는 사용하시는분이 따로 구축하시길(저는 Apache + mod_WSGI로 구축했습니다)
+    
     - Default Port : 5000 (Flask)
     
     - HTTP Method : GET
